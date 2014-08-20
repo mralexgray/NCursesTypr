@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C0605C619571A95000B7552 /* TextEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0605C519571A95000B7552 /* TextEditorView.m */; };
+		2C4E29D5199D56C0000FA8AC /* StartupOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E29D4199D56C0000FA8AC /* StartupOptions.m */; };
+		2C54CC32194B46CA00D11D59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54CC31194B46CA00D11D59 /* Foundation.framework */; };
+		2C54CC35194B46CA00D11D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C54CC34194B46CA00D11D59 /* main.m */; };
+		2C54CC39194B46CA00D11D59 /* NCursesLibrary.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 2C54CC38194B46CA00D11D59 /* NCursesLibrary.1 */; };
+		2C699B8819A50A7D0058713F /* NCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B5E19A50A7D0058713F /* NCApplication.m */; };
+		2C699B8919A50A7D0058713F /* NCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B6319A50A7D0058713F /* NCAlertView.m */; };
+		2C699B8A19A50A7D0058713F /* NCAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B6619A50A7D0058713F /* NCAlertViewController.m */; };
+		2C699B8B19A50A7D0058713F /* NCWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B6819A50A7D0058713F /* NCWindow.m */; };
+		2C699B8C19A50A7D0058713F /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B6B19A50A7D0058713F /* NCNavigationController.m */; };
+		2C699B8D19A50A7D0058713F /* NCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B6D19A50A7D0058713F /* NCViewController.m */; };
+		2C699B8E19A50A7D0058713F /* NCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B7019A50A7D0058713F /* NCLabel.m */; };
+		2C699B8F19A50A7D0058713F /* NCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B7219A50A7D0058713F /* NCView.m */; };
+		2C699B9019A50A7D0058713F /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B7619A50A7D0058713F /* NCColor.m */; };
+		2C699B9119A50A7D0058713F /* NCColorRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B7819A50A7D0058713F /* NCColorRange.m */; };
+		2C699B9219A50A7D0058713F /* NCKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B7B19A50A7D0058713F /* NCKey.m */; };
+		2C699B9319A50A7D0058713F /* NCRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B7E19A50A7D0058713F /* NCRender.m */; };
+		2C699B9419A50A7D0058713F /* NCRenderContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B8019A50A7D0058713F /* NCRenderContext.m */; };
+		2C699B9519A50A7D0058713F /* NCScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B8319A50A7D0058713F /* NCScreen.m */; };
+		2C699B9619A50A7D0058713F /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C699B8719A50A7D0058713F /* Logger.m */; };
+		2C7481E9195154F0001C40CC /* TestApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7481BF195154F0001C40CC /* TestApplication.m */; };
+		2C7481EA195154F0001C40CC /* FSViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7481C1195154F0001C40CC /* FSViewer.m */; };
+		2C7481EB195154F0001C40CC /* FileSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7481C3195154F0001C40CC /* FileSelectorViewController.m */; };
+		2C7481FA19515594001C40CC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7481F919515594001C40CC /* MainViewController.m */; };
+		2CA432951959AF9500930CC5 /* TabMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA432941959AF9500930CC5 /* TabMenuView.m */; };
+		2CA432981959B08D00930CC5 /* FileBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA432971959B08D00930CC5 /* FileBuffer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C54CC2C194B46CA00D11D59 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				2C54CC39194B46CA00D11D59 /* NCursesLibrary.1 in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2C0605C419571A95000B7552 /* TextEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorView.h; sourceTree = "<group>"; };
+		2C0605C519571A95000B7552 /* TextEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditorView.m; sourceTree = "<group>"; };
+		2C4E29D3199D56C0000FA8AC /* StartupOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartupOptions.h; sourceTree = "<group>"; };
+		2C4E29D4199D56C0000FA8AC /* StartupOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartupOptions.m; sourceTree = "<group>"; };
+		2C54CC2E194B46CA00D11D59 /* typr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = typr; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C54CC31194B46CA00D11D59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C54CC34194B46CA00D11D59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C54CC37194B46CA00D11D59 /* NCursesLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NCursesLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		2C54CC38194B46CA00D11D59 /* NCursesLibrary.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = NCursesLibrary.1; sourceTree = "<group>"; };
+		2C699B5D19A50A7D0058713F /* NCApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCApplication.h; sourceTree = "<group>"; };
+		2C699B5E19A50A7D0058713F /* NCApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCApplication.m; sourceTree = "<group>"; };
+		2C699B6219A50A7D0058713F /* NCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAlertView.h; sourceTree = "<group>"; };
+		2C699B6319A50A7D0058713F /* NCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAlertView.m; sourceTree = "<group>"; };
+		2C699B6419A50A7D0058713F /* NCAlertView_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAlertView_Protected.h; sourceTree = "<group>"; };
+		2C699B6519A50A7D0058713F /* NCAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAlertViewController.h; sourceTree = "<group>"; };
+		2C699B6619A50A7D0058713F /* NCAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAlertViewController.m; sourceTree = "<group>"; };
+		2C699B6719A50A7D0058713F /* NCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCWindow.h; sourceTree = "<group>"; };
+		2C699B6819A50A7D0058713F /* NCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCWindow.m; sourceTree = "<group>"; };
+		2C699B6A19A50A7D0058713F /* NCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
+		2C699B6B19A50A7D0058713F /* NCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCNavigationController.m; sourceTree = "<group>"; };
+		2C699B6C19A50A7D0058713F /* NCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCViewController.h; sourceTree = "<group>"; };
+		2C699B6D19A50A7D0058713F /* NCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCViewController.m; sourceTree = "<group>"; };
+		2C699B6F19A50A7D0058713F /* NCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLabel.h; sourceTree = "<group>"; };
+		2C699B7019A50A7D0058713F /* NCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLabel.m; sourceTree = "<group>"; };
+		2C699B7119A50A7D0058713F /* NCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCView.h; sourceTree = "<group>"; };
+		2C699B7219A50A7D0058713F /* NCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCView.m; sourceTree = "<group>"; };
+		2C699B7519A50A7D0058713F /* NCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
+		2C699B7619A50A7D0058713F /* NCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
+		2C699B7719A50A7D0058713F /* NCColorRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCColorRange.h; sourceTree = "<group>"; };
+		2C699B7819A50A7D0058713F /* NCColorRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCColorRange.m; sourceTree = "<group>"; };
+		2C699B7A19A50A7D0058713F /* NCKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCKey.h; sourceTree = "<group>"; };
+		2C699B7B19A50A7D0058713F /* NCKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCKey.m; sourceTree = "<group>"; };
+		2C699B7D19A50A7D0058713F /* NCRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRender.h; sourceTree = "<group>"; };
+		2C699B7E19A50A7D0058713F /* NCRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRender.m; sourceTree = "<group>"; };
+		2C699B7F19A50A7D0058713F /* NCRenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRenderContext.h; sourceTree = "<group>"; };
+		2C699B8019A50A7D0058713F /* NCRenderContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCRenderContext.m; sourceTree = "<group>"; };
+		2C699B8219A50A7D0058713F /* NCScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCScreen.h; sourceTree = "<group>"; };
+		2C699B8319A50A7D0058713F /* NCScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCScreen.m; sourceTree = "<group>"; };
+		2C699B8619A50A7D0058713F /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		2C699B8719A50A7D0058713F /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		2C7481BE195154F0001C40CC /* TestApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestApplication.h; sourceTree = "<group>"; };
+		2C7481BF195154F0001C40CC /* TestApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestApplication.m; sourceTree = "<group>"; };
+		2C7481C0195154F0001C40CC /* FSViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSViewer.h; sourceTree = "<group>"; };
+		2C7481C1195154F0001C40CC /* FSViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSViewer.m; sourceTree = "<group>"; };
+		2C7481C2195154F0001C40CC /* FileSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSelectorViewController.h; sourceTree = "<group>"; };
+		2C7481C3195154F0001C40CC /* FileSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSelectorViewController.m; sourceTree = "<group>"; };
+		2C7481F819515594001C40CC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2C7481F919515594001C40CC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2CA432931959AF9500930CC5 /* TabMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabMenuView.h; sourceTree = "<group>"; };
+		2CA432941959AF9500930CC5 /* TabMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabMenuView.m; sourceTree = "<group>"; };
+		2CA432961959B08D00930CC5 /* FileBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileBuffer.h; sourceTree = "<group>"; };
+		2CA432971959B08D00930CC5 /* FileBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileBuffer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C54CC2B194B46CA00D11D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C54CC32194B46CA00D11D59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C54CC25194B46CA00D11D59 = {
+			isa = PBXGroup;
+			children = (
+				2C54CC33194B46CA00D11D59 /* NCursesLibrary */,
+				2C54CC30194B46CA00D11D59 /* Frameworks */,
+				2C54CC2F194B46CA00D11D59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C54CC2F194B46CA00D11D59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C54CC2E194B46CA00D11D59 /* typr */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C54CC30194B46CA00D11D59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C54CC31194B46CA00D11D59 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C54CC33194B46CA00D11D59 /* NCursesLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B5B19A50A7D0058713F /* NCFramework */,
+				2C7481BD195154F0001C40CC /* App */,
+				2C54CC38194B46CA00D11D59 /* NCursesLibrary.1 */,
+				2C54CC34194B46CA00D11D59 /* main.m */,
+				2C54CC36194B46CA00D11D59 /* Supporting Files */,
+			);
+			path = NCursesLibrary;
+			sourceTree = "<group>";
+		};
+		2C54CC36194B46CA00D11D59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C54CC37194B46CA00D11D59 /* NCursesLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C699B5B19A50A7D0058713F /* NCFramework */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B5C19A50A7D0058713F /* Application */,
+				2C699B5F19A50A7D0058713F /* GUI */,
+				2C699B7319A50A7D0058713F /* IO */,
+				2C699B8419A50A7D0058713F /* Utils */,
+			);
+			name = NCFramework;
+			path = ../../NCursesFramework/NCFramework;
+			sourceTree = "<group>";
+		};
+		2C699B5C19A50A7D0058713F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B5D19A50A7D0058713F /* NCApplication.h */,
+				2C699B5E19A50A7D0058713F /* NCApplication.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2C699B5F19A50A7D0058713F /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B6019A50A7D0058713F /* Window */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		2C699B6019A50A7D0058713F /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B6119A50A7D0058713F /* Alert */,
+				2C699B6719A50A7D0058713F /* NCWindow.h */,
+				2C699B6819A50A7D0058713F /* NCWindow.m */,
+				2C699B6919A50A7D0058713F /* ViewController */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		2C699B6119A50A7D0058713F /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B6219A50A7D0058713F /* NCAlertView.h */,
+				2C699B6319A50A7D0058713F /* NCAlertView.m */,
+				2C699B6419A50A7D0058713F /* NCAlertView_Protected.h */,
+				2C699B6519A50A7D0058713F /* NCAlertViewController.h */,
+				2C699B6619A50A7D0058713F /* NCAlertViewController.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2C699B6919A50A7D0058713F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B6A19A50A7D0058713F /* NCNavigationController.h */,
+				2C699B6B19A50A7D0058713F /* NCNavigationController.m */,
+				2C699B6C19A50A7D0058713F /* NCViewController.h */,
+				2C699B6D19A50A7D0058713F /* NCViewController.m */,
+				2C699B6E19A50A7D0058713F /* View */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C699B6E19A50A7D0058713F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B6F19A50A7D0058713F /* NCLabel.h */,
+				2C699B7019A50A7D0058713F /* NCLabel.m */,
+				2C699B7119A50A7D0058713F /* NCView.h */,
+				2C699B7219A50A7D0058713F /* NCView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C699B7319A50A7D0058713F /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B7419A50A7D0058713F /* Color */,
+				2C699B7919A50A7D0058713F /* Key */,
+				2C699B7C19A50A7D0058713F /* Rendering */,
+				2C699B8119A50A7D0058713F /* Screen */,
+			);
+			path = IO;
+			sourceTree = "<group>";
+		};
+		2C699B7419A50A7D0058713F /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B7519A50A7D0058713F /* NCColor.h */,
+				2C699B7619A50A7D0058713F /* NCColor.m */,
+				2C699B7719A50A7D0058713F /* NCColorRange.h */,
+				2C699B7819A50A7D0058713F /* NCColorRange.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		2C699B7919A50A7D0058713F /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B7A19A50A7D0058713F /* NCKey.h */,
+				2C699B7B19A50A7D0058713F /* NCKey.m */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		2C699B7C19A50A7D0058713F /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B7D19A50A7D0058713F /* NCRender.h */,
+				2C699B7E19A50A7D0058713F /* NCRender.m */,
+				2C699B7F19A50A7D0058713F /* NCRenderContext.h */,
+				2C699B8019A50A7D0058713F /* NCRenderContext.m */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		2C699B8119A50A7D0058713F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B8219A50A7D0058713F /* NCScreen.h */,
+				2C699B8319A50A7D0058713F /* NCScreen.m */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		2C699B8419A50A7D0058713F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B8519A50A7D0058713F /* Logger */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2C699B8519A50A7D0058713F /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				2C699B8619A50A7D0058713F /* Logger.h */,
+				2C699B8719A50A7D0058713F /* Logger.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		2C7481BD195154F0001C40CC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2C7481BE195154F0001C40CC /* TestApplication.h */,
+				2C7481BF195154F0001C40CC /* TestApplication.m */,
+				2C7481C0195154F0001C40CC /* FSViewer.h */,
+				2C7481C1195154F0001C40CC /* FSViewer.m */,
+				2C7481C2195154F0001C40CC /* FileSelectorViewController.h */,
+				2C7481C3195154F0001C40CC /* FileSelectorViewController.m */,
+				2C7481F819515594001C40CC /* MainViewController.h */,
+				2C7481F919515594001C40CC /* MainViewController.m */,
+				2C0605C419571A95000B7552 /* TextEditorView.h */,
+				2C0605C519571A95000B7552 /* TextEditorView.m */,
+				2CA432931959AF9500930CC5 /* TabMenuView.h */,
+				2CA432941959AF9500930CC5 /* TabMenuView.m */,
+				2CA432961959B08D00930CC5 /* FileBuffer.h */,
+				2CA432971959B08D00930CC5 /* FileBuffer.m */,
+				2C4E29D3199D56C0000FA8AC /* StartupOptions.h */,
+				2C4E29D4199D56C0000FA8AC /* StartupOptions.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C54CC2D194B46CA00D11D59 /* NCursesLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C54CC3C194B46CA00D11D59 /* Build configuration list for PBXNativeTarget "NCursesLibrary" */;
+			buildPhases = (
+				2C54CC2A194B46CA00D11D59 /* Sources */,
+				2C54CC2B194B46CA00D11D59 /* Frameworks */,
+				2C54CC2C194B46CA00D11D59 /* Copy Files */,
+				2C54CC3F194B479300D11D59 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NCursesLibrary;
+			productName = NCursesLibrary;
+			productReference = 2C54CC2E194B46CA00D11D59 /* typr */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C54CC26194B46CA00D11D59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = None;
+			};
+			buildConfigurationList = 2C54CC29194B46CA00D11D59 /* Build configuration list for PBXProject "NCursesLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C54CC25194B46CA00D11D59;
+			productRefGroup = 2C54CC2F194B46CA00D11D59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C54CC2D194B46CA00D11D59 /* NCursesLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C54CC3F194B479300D11D59 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "open ${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C54CC2A194B46CA00D11D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0605C619571A95000B7552 /* TextEditorView.m in Sources */,
+				2C699B8B19A50A7D0058713F /* NCWindow.m in Sources */,
+				2C7481FA19515594001C40CC /* MainViewController.m in Sources */,
+				2C699B8D19A50A7D0058713F /* NCViewController.m in Sources */,
+				2C699B9419A50A7D0058713F /* NCRenderContext.m in Sources */,
+				2C699B8A19A50A7D0058713F /* NCAlertViewController.m in Sources */,
+				2C699B8E19A50A7D0058713F /* NCLabel.m in Sources */,
+				2C699B8F19A50A7D0058713F /* NCView.m in Sources */,
+				2C699B9519A50A7D0058713F /* NCScreen.m in Sources */,
+				2C4E29D5199D56C0000FA8AC /* StartupOptions.m in Sources */,
+				2C699B8919A50A7D0058713F /* NCAlertView.m in Sources */,
+				2CA432981959B08D00930CC5 /* FileBuffer.m in Sources */,
+				2C699B9319A50A7D0058713F /* NCRender.m in Sources */,
+				2C7481E9195154F0001C40CC /* TestApplication.m in Sources */,
+				2C699B9119A50A7D0058713F /* NCColorRange.m in Sources */,
+				2C699B8819A50A7D0058713F /* NCApplication.m in Sources */,
+				2C7481EA195154F0001C40CC /* FSViewer.m in Sources */,
+				2C699B8C19A50A7D0058713F /* NCNavigationController.m in Sources */,
+				2C699B9019A50A7D0058713F /* NCColor.m in Sources */,
+				2C699B9619A50A7D0058713F /* Logger.m in Sources */,
+				2C699B9219A50A7D0058713F /* NCKey.m in Sources */,
+				2C7481EB195154F0001C40CC /* FileSelectorViewController.m in Sources */,
+				2C54CC35194B46CA00D11D59 /* main.m in Sources */,
+				2CA432951959AF9500930CC5 /* TabMenuView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2C54CC3A194B46CA00D11D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2C54CC3B194B46CA00D11D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2C54CC3D194B46CA00D11D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NCursesLibrary/NCursesLibrary-Prefix.pch";
+				OTHER_LDFLAGS = "-lncurses";
+				PRODUCT_NAME = typr;
+			};
+			name = Debug;
+		};
+		2C54CC3E194B46CA00D11D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NCursesLibrary/NCursesLibrary-Prefix.pch";
+				OTHER_LDFLAGS = "-lncurses";
+				PRODUCT_NAME = typr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C54CC29194B46CA00D11D59 /* Build configuration list for PBXProject "NCursesLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C54CC3A194B46CA00D11D59 /* Debug */,
+				2C54CC3B194B46CA00D11D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C54CC3C194B46CA00D11D59 /* Build configuration list for PBXNativeTarget "NCursesLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C54CC3D194B46CA00D11D59 /* Debug */,
+				2C54CC3E194B46CA00D11D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C54CC26194B46CA00D11D59 /* Project object */;
+}
