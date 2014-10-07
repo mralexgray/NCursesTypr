@@ -10,8 +10,8 @@
 
 @interface FileBuffer : NSObject
 
-@property (nonatomic, strong) NSString *path;
-@property (nonatomic, strong) NSMutableArray *lines;
+@property (nonatomic, strong) NSString* path;
+@property (nonatomic, strong) NSMutableArray* lines;
 
 @property (nonatomic, assign) int cursorOffsetX;
 @property (nonatomic, assign) int cursorOffsetY;
@@ -26,6 +26,6 @@
 @property (nonatomic, assign) int markCursorLineX;
 @property (nonatomic, assign) int markScreenOffsetY;
 
-+ (id) fileBufferFromFilePath:(NSString*)path;
++ (id)fileBufferFromFilePath:(NSString*)path;
 
 @end

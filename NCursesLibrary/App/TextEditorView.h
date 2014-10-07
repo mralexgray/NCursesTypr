@@ -9,9 +9,9 @@
 #import "NCView.h"
 #import "FileBuffer.h"
 
-@protocol TextEditorViewOutput <NSObject>
+@protocol TextEditorViewOutput<NSObject>
 
-- (void) failedToOpenFile:(NSString*)filePath;
+- (void)failedToOpenFile:(NSString*)filePath;
 
 @end
 
@@ -38,9 +38,9 @@
 - (NSArray*)markCopy;
 - (void)paste:(NSArray*)text;
 
-- (void) openBuffer:(FileBuffer*)buffer;
+- (void)openBuffer:(FileBuffer*)buffer;
 
 @property (nonatomic, strong) id<TextEditorViewOutput> output;
-@property (nonatomic, strong) FileBuffer *buffer;
+@property (nonatomic, strong) FileBuffer* buffer;
 
 @end

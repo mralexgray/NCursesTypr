@@ -12,7 +12,7 @@
 #import "TextEditorView.h"
 #import "TabMenuView.h"
 
-@interface MainViewController : NCViewController  <TextEditorViewOutput,
-                                                      TabMenuViewOutput,
-                                     FileSelectorViewControllerDelegate >
+@interface MainViewController : NCViewController<TextEditorViewOutput,
+                                                 TabMenuViewOutput,
+                                                 FileSelectorViewControllerDelegate>
 @end

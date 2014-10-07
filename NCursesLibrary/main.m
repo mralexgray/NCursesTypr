@@ -9,13 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "TestApplication.h"
 
-int main(int argc, const char * argv[])
-{
+int main(int argc, const char* argv[]) {
 
-    @autoreleasepool
-    {        
-        TestApplication *application = [TestApplication.alloc init];
-    }
-    return 0;
+  @autoreleasepool {
+    TestApplication* application = [TestApplication.alloc init];
+  }
+  return 0;
 }
-

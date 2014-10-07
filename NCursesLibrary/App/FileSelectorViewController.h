@@ -9,16 +9,16 @@
 #import "NCViewController.h"
 #import "FSViewer.h"
 
-@protocol FileSelectorViewControllerDelegate <NSObject>
+@protocol FileSelectorViewControllerDelegate<NSObject>
 
-- (void) didSelectFile:(NSString*)file
-               withTag:(int)tag;
+- (void)didSelectFile:(NSString*)file
+              withTag:(int)tag;
 
 @end
 
-@interface FileSelectorViewController : NCViewController <FSViewerDelegate>
+@interface FileSelectorViewController : NCViewController<FSViewerDelegate>
 
-- initWithPath:(NSString*) path
+- initWithPath:(NSString*)path
        withTag:(int)tag;
 
 @property (nonatomic, weak) id<FileSelectorViewControllerDelegate> output;
