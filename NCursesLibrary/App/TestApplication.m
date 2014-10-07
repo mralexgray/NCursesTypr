@@ -14,14 +14,16 @@
 
 @implementation TestApplication
 
+static NCNavigationController *nvc;
+static NCWindow *window;
+
 - (void)applicationLaunched
 {
     [super applicationLaunched];
+
+    nvc = [NCNavigationController.alloc initWithRootViewController:MainViewController.new];
     
-    MainViewController *vc = [[MainViewController alloc] init];
-    NCNavigationController *nvc = [[NCNavigationController alloc] initWithRootViewController:vc];
-    
-    NCWindow *window = [[NCWindow alloc] initWithFrame:[NCScreen bounds]];
+    window = [NCWindow.alloc initWithFrame:NCScreen.bounds];
     [window setRootViewController:nvc];
     
     [self addWindow:window];

@@ -14,7 +14,7 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool
     {        
-        TestApplication *application = [[TestApplication alloc] init];
+        TestApplication *application = [TestApplication.alloc init];
     }
     return 0;
 }

@@ -9,23 +9,20 @@
 #import "NCView.h"
 
 @interface File : NSObject
-- (id) initWithPath:(NSString*) path;
-@property (nonatomic, strong) NSString *path;
-@property (nonatomic, strong) NSString *fileName;
-@property (nonatomic, strong) NSString *fileExtension;
-@property (nonatomic, assign) BOOL isHidden;
-@property (nonatomic, assign) int size;
+- initWithPath:(NSString*) path;
+@property (nonatomic) NSString *path, *fileName,  *fileExtension;
+@property (nonatomic) BOOL isHidden;
+@property (nonatomic) int size;
 @end
 
 @interface Folder : NSObject
-- (id) initWithPath:(NSString*) path;
-@property (nonatomic, strong) NSString *path;
-@property (nonatomic, assign) BOOL isHidden;
-@property (nonatomic, strong) NSString *dirName;
+- initWithPath:(NSString*) path;
+@property (nonatomic) NSString *path, *dirName;
+@property (nonatomic) BOOL isHidden;
 @end
 
 @protocol FSViewerDelegate <NSObject>
-- (void) didSelectFile:(NSString*)filePath;
+- (void)   didSelectFile:(NSString*)filePath;
 - (void) didSelectFolder:(NSString*)dirPath;
 @end
 

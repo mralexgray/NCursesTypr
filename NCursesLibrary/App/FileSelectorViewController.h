@@ -18,10 +18,10 @@
 
 @interface FileSelectorViewController : NCViewController <FSViewerDelegate>
 
-- (id) initWithPath:(NSString*) path
-            withTag:(int)tag;
+- initWithPath:(NSString*) path
+       withTag:(int)tag;
 
 @property (nonatomic, weak) id<FileSelectorViewControllerDelegate> output;
-@property (nonatomic, assign) BOOL allowNewFile;
+@property (nonatomic) BOOL allowNewFile;
 
 @end

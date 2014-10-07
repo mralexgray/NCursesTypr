@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C0605C619571A95000B7552 /* TextEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0605C519571A95000B7552 /* TextEditorView.m */; };
-		2C4E29D5199D56C0000FA8AC /* StartupOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E29D4199D56C0000FA8AC /* StartupOptions.m */; };
 		2C54CC32194B46CA00D11D59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C54CC31194B46CA00D11D59 /* Foundation.framework */; };
 		2C54CC35194B46CA00D11D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C54CC34194B46CA00D11D59 /* main.m */; };
 		2C54CC39194B46CA00D11D59 /* NCursesLibrary.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 2C54CC38194B46CA00D11D59 /* NCursesLibrary.1 */; };
@@ -52,8 +51,6 @@
 /* Begin PBXFileReference section */
 		2C0605C419571A95000B7552 /* TextEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorView.h; sourceTree = "<group>"; };
 		2C0605C519571A95000B7552 /* TextEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditorView.m; sourceTree = "<group>"; };
-		2C4E29D3199D56C0000FA8AC /* StartupOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartupOptions.h; sourceTree = "<group>"; };
-		2C4E29D4199D56C0000FA8AC /* StartupOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartupOptions.m; sourceTree = "<group>"; };
 		2C54CC2E194B46CA00D11D59 /* typr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = typr; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C54CC31194B46CA00D11D59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C54CC34194B46CA00D11D59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,7 +62,7 @@
 		2C699B6319A50A7D0058713F /* NCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAlertView.m; sourceTree = "<group>"; };
 		2C699B6419A50A7D0058713F /* NCAlertView_Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAlertView_Protected.h; sourceTree = "<group>"; };
 		2C699B6519A50A7D0058713F /* NCAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCAlertViewController.h; sourceTree = "<group>"; };
-		2C699B6619A50A7D0058713F /* NCAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCAlertViewController.m; sourceTree = "<group>"; };
+		2C699B6619A50A7D0058713F /* NCAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NCAlertViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C699B6719A50A7D0058713F /* NCWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCWindow.h; sourceTree = "<group>"; };
 		2C699B6819A50A7D0058713F /* NCWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCWindow.m; sourceTree = "<group>"; };
 		2C699B6A19A50A7D0058713F /* NCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -95,13 +92,15 @@
 		2C7481C0195154F0001C40CC /* FSViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSViewer.h; sourceTree = "<group>"; };
 		2C7481C1195154F0001C40CC /* FSViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSViewer.m; sourceTree = "<group>"; };
 		2C7481C2195154F0001C40CC /* FileSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSelectorViewController.h; sourceTree = "<group>"; };
-		2C7481C3195154F0001C40CC /* FileSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSelectorViewController.m; sourceTree = "<group>"; };
+		2C7481C3195154F0001C40CC /* FileSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileSelectorViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2C7481F819515594001C40CC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		2C7481F919515594001C40CC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2C7481F919515594001C40CC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2CA432931959AF9500930CC5 /* TabMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabMenuView.h; sourceTree = "<group>"; };
 		2CA432941959AF9500930CC5 /* TabMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabMenuView.m; sourceTree = "<group>"; };
 		2CA432961959B08D00930CC5 /* FileBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileBuffer.h; sourceTree = "<group>"; };
 		2CA432971959B08D00930CC5 /* FileBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileBuffer.m; sourceTree = "<group>"; };
+		7B83D35719E3835F00E4B73C /* StartupOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupOptions.h; sourceTree = "<group>"; };
+		7B83D35819E3835F00E4B73C /* StartupOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupOptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,8 +320,8 @@
 				2CA432941959AF9500930CC5 /* TabMenuView.m */,
 				2CA432961959B08D00930CC5 /* FileBuffer.h */,
 				2CA432971959B08D00930CC5 /* FileBuffer.m */,
-				2C4E29D3199D56C0000FA8AC /* StartupOptions.h */,
-				2C4E29D4199D56C0000FA8AC /* StartupOptions.m */,
+				7B83D35719E3835F00E4B73C /* StartupOptions.h */,
+				7B83D35819E3835F00E4B73C /* StartupOptions.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -386,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "open ${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}";
+			shellScript = "#/usr/bin/logger\n\n/xbin/openiniterm ${TARGET_BUILD_DIR}/${EXECUTABLE_NAME} ${SRCROOT}/${TARGET_NAME}/App/*.m";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -404,7 +403,6 @@
 				2C699B8E19A50A7D0058713F /* NCLabel.m in Sources */,
 				2C699B8F19A50A7D0058713F /* NCView.m in Sources */,
 				2C699B9519A50A7D0058713F /* NCScreen.m in Sources */,
-				2C4E29D5199D56C0000FA8AC /* StartupOptions.m in Sources */,
 				2C699B8919A50A7D0058713F /* NCAlertView.m in Sources */,
 				2CA432981959B08D00930CC5 /* FileBuffer.m in Sources */,
 				2C699B9319A50A7D0058713F /* NCRender.m in Sources */,
@@ -498,6 +496,7 @@
 		2C54CC3D194B46CA00D11D59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NCursesLibrary/NCursesLibrary-Prefix.pch";
 				OTHER_LDFLAGS = "-lncurses";
@@ -508,6 +507,7 @@
 		2C54CC3E194B46CA00D11D59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NCursesLibrary/NCursesLibrary-Prefix.pch";
 				OTHER_LDFLAGS = "-lncurses";

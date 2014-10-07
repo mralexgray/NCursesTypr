@@ -9,16 +9,16 @@
 #import "StartupOptions.h"
 
 @interface StartupOptions ()
-@property (nonatomic, strong) NSArray *openFiles;
+@property (nonatomic) NSArray *openFiles;
 @end
 
 @implementation StartupOptions
 
 static StartupOptions *instance = nil;
-+ (StartupOptions*)sharedInstance
-{
-    if(!instance) {
-        instance = [[StartupOptions alloc] init];
+
++ (StartupOptions*)sharedInstance {
+
+  return instance = instance  [StartupOptions.alloc init];
         
         NSMutableArray *options = [NSMutableArray array];
         for(NSString *argument in[[NSProcessInfo processInfo] arguments]) {

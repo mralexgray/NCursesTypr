@@ -479,8 +479,8 @@
                     NSString *line = [self.buffer.lines objectAtIndex:i];
                     if(line) {
                         NCColorRange *colorRange = nil;
-                        NCColor *fg = [NCColor whiteColor];
-                        NCColor *bg = [NCColor blackColor];
+                        NCColor *fg = NCColor.whiteColor;
+                        NCColor *bg = NCColor.blackColor;
                         
                         // Create mark color range
                         if(self.buffer.markMode)
@@ -493,27 +493,27 @@
                             BOOL isLineEnd = i == MAX(self.buffer.cursorLineY, self.buffer.markCursorLineY);
                             
                             if(isLineBetweenCursors) {
-                                fg = [NCColor blackColor];
-                                bg = [NCColor whiteColor];
+                                fg = NCColor.blackColor;
+                                bg = NCColor.whiteColor;
                             } else if(isLineStartAndEnd) {
                                 if(self.buffer.cursorLineY == self.buffer.markCursorLineY)
                                 {
                                     int min = MIN(self.buffer.cursorLineX, self.buffer.markCursorLineX);
                                     int max = MAX(self.buffer.cursorLineX, self.buffer.markCursorLineX);
                                     int len = max - min;
-                                    colorRange = [[NCColorRange alloc] initWithForeground:[NCColor blackColor]
-                                                                           withBackground:[NCColor whiteColor]
+                                    colorRange = [NCColorRange.alloc initWithForeground:NCColor.blackColor
+                                                                           withBackground:NCColor.whiteColor
                                                                                 withRange:NSMakeRange(min, len)];
                                 }
                             } else if(isLineStart) {
                                 int x = self.buffer.cursorLineY < self.buffer.markCursorLineY ? self.buffer.cursorLineX : self.buffer.markCursorLineX;
-                                colorRange = [[NCColorRange alloc] initWithForeground:[NCColor blackColor]
-                                                                       withBackground:[NCColor whiteColor]
+                                colorRange = [NCColorRange.alloc initWithForeground:NCColor.blackColor
+                                                                       withBackground:NCColor.whiteColor
                                                                             withRange:NSMakeRange(x, line.length - x)];
                             } else if(isLineEnd) {
                                 int x = self.buffer.cursorLineY > self.buffer.markCursorLineY ? self.buffer.cursorLineX : self.buffer.markCursorLineX;
-                                colorRange = [[NCColorRange alloc] initWithForeground:[NCColor blackColor]
-                                                                       withBackground:[NCColor whiteColor]
+                                colorRange = [NCColorRange.alloc initWithForeground:NCColor.blackColor
+                                                                       withBackground:NCColor.whiteColor
                                                                             withRange:NSMakeRange(0, x)];
                             }
                         }
@@ -540,8 +540,8 @@
                                                         breakMode:NCLineBreakByWordWrapping
                                                       tuncateMode:NCLineTruncationByClipping];
                             [context drawPoint:CGSizeMake(self.frame.origin.x + cursor.width, self.frame.origin.y + y + cursor.height)
-                                withForeground:[NCColor blackColor]
-                                withBackground:[NCColor whiteColor]];
+                                withForeground:NCColor.blackColor
+                                withBackground:NCColor.whiteColor];
                         }
                         
                         y += size.height;
@@ -555,8 +555,8 @@
         } else {
             [context drawText:@"No buffer open"
                        inRect:CGRectMake(rect.origin.x, rect.origin.y + rect.size.height / 2, rect.size.width, 1)
-               withForeground:[NCColor whiteColor]
-               withBackground:[NCColor blackColor]
+               withForeground:NCColor.whiteColor
+               withBackground:NCColor.blackColor
                withColorRange:nil
                     breakMode:NCLineBreakByNoWrapping
                  truncateMode:NCLineTruncationByTruncationTail

@@ -10,41 +10,29 @@
 	<string>NCursesLibrary</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1BF853B7-CBC6-4B08-8A7E-40CAF4C66FBA</key>
+		<key>C006B9CC455FCA8BB09D7025859B9512A6C3D2A7</key>
 		<string>https://github.com/Holloweye/NCursesTypr.git</string>
-		<key>AA861FEF-11A0-4BE3-BA76-E9AC1A6B2D2F</key>
-		<string>https://github.com/Holloweye/NCursesFramework.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NCursesLibrary.xcodeproj/project.xcworkspace</string>
+	<string>NCursesLibrary.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1BF853B7-CBC6-4B08-8A7E-40CAF4C66FBA</key>
+		<key>C006B9CC455FCA8BB09D7025859B9512A6C3D2A7</key>
 		<string>../..</string>
-		<key>AA861FEF-11A0-4BE3-BA76-E9AC1A6B2D2F</key>
-		<string>../../../NCursesFramework</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Holloweye/NCursesTypr.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1BF853B7-CBC6-4B08-8A7E-40CAF4C66FBA</string>
+	<string>C006B9CC455FCA8BB09D7025859B9512A6C3D2A7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AA861FEF-11A0-4BE3-BA76-E9AC1A6B2D2F</string>
-			<key>IDESourceControlWCCName</key>
-			<string>NCursesFramework</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1BF853B7-CBC6-4B08-8A7E-40CAF4C66FBA</string>
+			<string>C006B9CC455FCA8BB09D7025859B9512A6C3D2A7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>NCursesTypr</string>
 		</dict>

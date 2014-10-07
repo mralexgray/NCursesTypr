@@ -39,8 +39,8 @@
         if(self.path && self.path.length > 0) {
             [context drawText:self.path
                        inRect:CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, 1)
-               withForeground:[NCColor whiteColor]
-               withBackground:[NCColor blackColor]
+               withForeground:NCColor.whiteColor
+               withBackground:NCColor.blackColor
                withColorRange:nil
                     breakMode:NCLineBreakByNoWrapping
                  truncateMode:NCLineTruncationByTruncatingHead
@@ -55,8 +55,8 @@
                                             width:rect.size.width];
             [context drawText:text
                        inRect:CGRectMake(rect.origin.x, rect.origin.y, textSize.width, 1)
-               withForeground:[NCColor blackColor]
-               withBackground:[NCColor whiteColor]
+               withForeground:NCColor.blackColor
+               withBackground:NCColor.whiteColor
                withColorRange:nil
                     breakMode:NCLineBreakByNoWrapping
                  truncateMode:NCLineTruncationByTruncationTail
@@ -71,8 +71,8 @@
                                             width:rect.size.width];
             [context drawText:text
                        inRect:CGRectMake(rect.origin.x, rect.origin.y, textSize.width, 1)
-               withForeground:[NCColor blackColor]
-               withBackground:[NCColor whiteColor]
+               withForeground:NCColor.blackColor
+               withBackground:NCColor.whiteColor
                withColorRange:nil
                     breakMode:NCLineBreakByNoWrapping
                  truncateMode:NCLineTruncationByTruncationTail
@@ -99,8 +99,8 @@
                 if(self.lineY == i) {
                     [context drawText:text
                                inRect:CGRectMake(rect.origin.x, rect.origin.y + y, textSize.width, textSize.height)
-                       withForeground:[NCColor blackColor]
-                       withBackground:[NCColor whiteColor]
+                       withForeground:NCColor.blackColor
+                       withBackground:NCColor.whiteColor
                        withColorRange:nil
                             breakMode:NCLineBreakByWordWrapping
                          truncateMode:NCLineTruncationByClipping
@@ -108,8 +108,8 @@
                 } else {
                     [context drawText:text
                                inRect:CGRectMake(rect.origin.x, rect.origin.y + y, textSize.width, textSize.height)
-                       withForeground:[NCColor whiteColor]
-                       withBackground:[NCColor blackColor]
+                       withForeground:NCColor.whiteColor
+                       withBackground:NCColor.blackColor
                        withColorRange:nil
                             breakMode:NCLineBreakByWordWrapping
                          truncateMode:NCLineTruncationByClipping
@@ -129,8 +129,8 @@
                 if(self.lineY == i) {
                     [context drawText:text
                                inRect:CGRectMake(rect.origin.x, rect.origin.y + y, textSize.width, textSize.height)
-                       withForeground:[NCColor blackColor]
-                       withBackground:[NCColor whiteColor]
+                       withForeground:NCColor.blackColor
+                       withBackground:NCColor.whiteColor
                        withColorRange:nil
                             breakMode:NCLineBreakByWordWrapping
                          truncateMode:NCLineTruncationByClipping
@@ -138,8 +138,8 @@
                 } else {
                     [context drawText:text
                                inRect:CGRectMake(rect.origin.x, rect.origin.y + y, textSize.width, textSize.height)
-                       withForeground:[NCColor whiteColor]
-                       withBackground:[NCColor blackColor]
+                       withForeground:NCColor.whiteColor
+                       withBackground:NCColor.blackColor
                        withColorRange:nil
                             breakMode:NCLineBreakByWordWrapping
                          truncateMode:NCLineTruncationByClipping
@@ -166,7 +166,7 @@
     NSMutableArray *folders = [NSMutableArray array];
     
     if(path.length > 1 && [self previousFolderIn:path]) {
-        Folder *folder = [[Folder alloc] initWithPath:[self previousFolderIn:path]];
+        Folder *folder = [Folder.alloc initWithPath:[self previousFolderIn:path]];
         folder.dirName = @"..";
         [folders addObject:folder];
         
@@ -178,12 +178,12 @@
         BOOL isDir = YES;
         if([[NSFileManager defaultManager] fileExistsAtPath:f isDirectory:&isDir]) {
             if(isDir) {
-                Folder * folder = [[Folder alloc] initWithPath:f];
+                Folder * folder = [Folder.alloc initWithPath:f];
                 if(!folder.isHidden) {
                     [folders addObject:folder];
                 }
             } else {
-                File *file = [[File alloc] initWithPath:f];
+                File *file = [File.alloc initWithPath:f];
                 if(!file.isHidden) {
                     [files addObject:file];
                 }

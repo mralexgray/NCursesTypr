@@ -33,7 +33,7 @@
                 tag:(NSObject *)tag
 {
     if(name) {
-        TabMenuItem *item = [[TabMenuItem alloc] init];
+        TabMenuItem *item = [TabMenuItem.alloc init];
         item.name = name;
         item.tag = tag;
         [self.items addObject:item];

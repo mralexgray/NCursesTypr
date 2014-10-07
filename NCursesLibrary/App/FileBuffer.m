@@ -21,7 +21,7 @@
         if(content && !error) {
             NSArray *l = [content componentsSeparatedByString:@"\n"];
             
-            FileBuffer *buffer = [[FileBuffer alloc] init];
+            FileBuffer *buffer = [FileBuffer.alloc init];
             buffer.path = path;
             buffer.lines = [NSMutableArray array];
             for(NSString *line in l) {
