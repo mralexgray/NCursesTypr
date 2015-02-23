@@ -84,7 +84,7 @@
 
     for (int i = self.screenOffsetY; folders && files && i < filesAndFolders.count && i < self.screenOffsetY + self.frame.size.height; i++) {
 
-      NSObject* obj = [filesAndFolders objectAtIndex:i];
+      NSObject* obj = filesAndFolders[i];
       if (obj && [obj isKindOfClass:[Folder class]]) {
         Folder* folder = (Folder*)obj;
 
@@ -170,7 +170,7 @@
   }
 
   for (int i = 0; i < contents.count; i++) {
-    NSString* f = [path stringByAppendingString:[contents objectAtIndex:i]];
+    NSString* f = [path stringByAppendingString:contents[i]];
     BOOL isDir = YES;
     if ([[NSFileManager defaultManager] fileExistsAtPath:f isDirectory:&isDir]) {
       if (isDir) {
@@ -247,12 +247,12 @@
   NSArray* files = self.filteredFiles ? self.filteredFiles : self.files;
 
   if (self.lineY >= folders.count && self.lineY < folders.count + files.count) {
-    File* file = [files objectAtIndex:self.lineY - folders.count];
+    File* file = files[self.lineY - folders.count];
     if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectFile:)]) {
       [self.delegate didSelectFile:file.path];
     }
   } else if (self.lineY < folders.count) {
-    Folder* folder = [folders objectAtIndex:self.lineY];
+    Folder* folder = folders[self.lineY];
     if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectFolder:)]) {
       [self.delegate didSelectFolder:folder.path];
     }
@@ -338,7 +338,7 @@
 
 @implementation File
 
-- (id)initWithPath:(NSString*)path {
+- initWithPath:(NSString*)path {
   self = [super init];
   if (self) {
     self.path = path;
@@ -357,7 +357,7 @@
 
 @implementation Folder
 
-- (id)initWithPath:(NSString*)path {
+- initWithPath:(NSString*)path {
   self = [super init];
   if (self) {
     self.path = path.length > 0 && ![[path substringFromIndex:path.length - 1] isEqualToString:@"/"] ? [path stringByAppendingString:@"/"] : path;

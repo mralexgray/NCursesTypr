@@ -14,16 +14,24 @@
 
 @implementation TestApplication
 
+static NCViewController *vc;
 static NCNavigationController* nvc;
 static NCWindow* window;
 
 - (void)applicationLaunched {
+
   [super applicationLaunched];
 
-  nvc = [NCNavigationController.alloc initWithRootViewController:MainViewController.new];
+  vc = NCViewController.new;
+  NSRect r = NCScreen.bounds;
+  r.size.height /= 2.;
+  vc.view = [NCView.alloc initWithFrame:r];
+  vc.view.backgroundColor = [NCColor redColor];
+//  nvc =
+//    [NCNavigationController.alloc initWithRootViewController:MainViewController.new];
 
-  window = [NCWindow.alloc initWithFrame:NCScreen.bounds];
-  [window setRootViewController:nvc];
+  window = [NCWindow.alloc initWithFrame:r];
+  [window setRootViewController:vc];
 
   [self addWindow:window];
 }

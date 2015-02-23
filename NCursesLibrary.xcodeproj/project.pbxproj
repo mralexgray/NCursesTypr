@@ -215,10 +215,10 @@
 		2C699B6919A50A7D0058713F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2C699B6A19A50A7D0058713F /* NCNavigationController.h */,
-				2C699B6B19A50A7D0058713F /* NCNavigationController.m */,
 				2C699B6C19A50A7D0058713F /* NCViewController.h */,
 				2C699B6D19A50A7D0058713F /* NCViewController.m */,
+				2C699B6A19A50A7D0058713F /* NCNavigationController.h */,
+				2C699B6B19A50A7D0058713F /* NCNavigationController.m */,
 				2C699B6E19A50A7D0058713F /* View */,
 			);
 			path = ViewController;
@@ -385,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#/usr/bin/logger\n\n/xbin/openiniterm ${TARGET_BUILD_DIR}/${EXECUTABLE_NAME} ${SRCROOT}/${TARGET_NAME}/App/*.m";
+			shellScript = "#/usr/bin/logger\n\n# /xbin/openiniterm ${TARGET_BUILD_DIR}/${EXECUTABLE_NAME} ${SRCROOT}/${TARGET_NAME}/App/*.m\n\n/usr/local/bin/terminal-notifier -title \"Built NCLibApp\" -message \"On clipboard: ${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\"\n\necho \"${TARGET_BUILD_DIR}/${EXECUTABLE_NAME}\" | pbcopy";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -147,11 +147,11 @@
 - (void)moveEndOfLine {
   if (self.buffer) {
     if (self.buffer.markMode) {
-      self.buffer.markCursorLineX = (int)[[self.buffer.lines objectAtIndex:self.buffer.markCursorLineY] length];
-      self.buffer.markCursorOffsetX = (int)[[self.buffer.lines objectAtIndex:self.buffer.markCursorLineY] length];
+      self.buffer.markCursorLineX = (int)[(self.buffer.lines)[self.buffer.markCursorLineY] length];
+      self.buffer.markCursorOffsetX = (int)[(self.buffer.lines)[self.buffer.markCursorLineY] length];
     } else {
-      self.buffer.cursorLineX = (int)[[self.buffer.lines objectAtIndex:self.buffer.cursorLineY] length];
-      self.buffer.cursorOffsetX = (int)[[self.buffer.lines objectAtIndex:self.buffer.cursorLineY] length];
+      self.buffer.cursorLineX = (int)[(self.buffer.lines)[self.buffer.cursorLineY] length];
+      self.buffer.cursorOffsetX = (int)[(self.buffer.lines)[self.buffer.cursorLineY] length];
     }
   }
 }
@@ -178,7 +178,7 @@
       int foundLineY = -1;
       int foundOffsetX = -1;
       for (int y = self.buffer.cursorLineY; y < self.buffer.lines.count; y++) {
-        NSString* line = [self.buffer.lines objectAtIndex:y];
+        NSString* line = (self.buffer.lines)[y];
         if (y == self.buffer.cursorLineY) {
           if (self.buffer.cursorOffsetX + 1 < line.length) {
             NSRange range = [[line substringFromIndex:self.buffer.cursorOffsetX + 1] rangeOfString:toFind options:NSCaseInsensitiveSearch];
@@ -199,7 +199,7 @@
       }
       if (foundLineY == -1 && foundOffsetX == -1) {
         for (int y = 0; y < self.buffer.cursorLineY; y++) {
-          NSString* line = [self.buffer.lines objectAtIndex:y];
+          NSString* line = (self.buffer.lines)[y];
           NSRange range = [line rangeOfString:toFind options:NSCaseInsensitiveSearch];
           if (range.location != NSNotFound) {
             foundLineY = y;
@@ -317,18 +317,18 @@
 
       BOOL isFirstCopyLine = i == self.buffer.cursorLineY;
       if (isFirstCopyLine) {
-        contentOnFirstLine = [[self.buffer.lines objectAtIndex:i] substringFromIndex:self.buffer.cursorLineX];
+        contentOnFirstLine = [(self.buffer.lines)[i] substringFromIndex:self.buffer.cursorLineX];
         if (contentOnFirstLine) {
-          [[self.buffer.lines objectAtIndex:i] deleteCharactersInRange:NSMakeRange(self.buffer.cursorLineX, contentOnFirstLine.length)];
+          [(self.buffer.lines)[i] deleteCharactersInRange:NSMakeRange(self.buffer.cursorLineX, contentOnFirstLine.length)];
         }
-        [[self.buffer.lines objectAtIndex:i] appendString:[text objectAtIndex:i - self.buffer.cursorLineY]];
+        [(self.buffer.lines)[i] appendString:text[i - self.buffer.cursorLineY]];
       } else {
-        [self.buffer.lines insertObject:[text objectAtIndex:i - self.buffer.cursorLineY] atIndex:i];
+        [self.buffer.lines insertObject:text[i - self.buffer.cursorLineY] atIndex:i];
       }
 
       BOOL isLastCopyLine = i == self.buffer.cursorLineY + text.count - 1;
       if (isLastCopyLine && contentOnFirstLine) {
-        [[self.buffer.lines objectAtIndex:i] appendString:contentOnFirstLine];
+        [(self.buffer.lines)[i] appendString:contentOnFirstLine];
       }
     }
   }
@@ -356,32 +356,32 @@
     posStart = self.buffer.markCursorLineX;
     posEnd = self.buffer.cursorLineX;
   }
-  if (posEnd + 1 < [[self.buffer.lines objectAtIndex:self.buffer.cursorLineY] length]) {
+  if (posEnd + 1 < [(self.buffer.lines)[self.buffer.cursorLineY] length]) {
     posEnd++;
   }
 
   if (lineStart == lineEnd) {
     NSRange range = NSMakeRange(posStart, posEnd - posStart);
-    [deletedText addObject:[NSMutableString stringWithString:[[self.buffer.lines objectAtIndex:lineStart] substringWithRange:range]]];
+    [deletedText addObject:[NSMutableString stringWithString:[(self.buffer.lines)[lineStart] substringWithRange:range]]];
     if (delete) {
-      [[self.buffer.lines objectAtIndex:lineStart] deleteCharactersInRange:range];
+      [(self.buffer.lines)[lineStart] deleteCharactersInRange:range];
     }
   } else {
     for (int i = lineEnd; i >= lineStart; i--) {
       if (i == lineEnd) {
         NSRange range = NSMakeRange(0, posEnd);
-        [deletedText addObject:[NSMutableString stringWithString:[[self.buffer.lines objectAtIndex:i] substringWithRange:range]]];
+        [deletedText addObject:[NSMutableString stringWithString:[(self.buffer.lines)[i] substringWithRange:range]]];
         if (delete) {
-          [[self.buffer.lines objectAtIndex:i] deleteCharactersInRange:range];
+          [(self.buffer.lines)[i] deleteCharactersInRange:range];
         }
       } else if (i == lineStart) {
-        NSRange range = NSMakeRange(posStart, [[self.buffer.lines objectAtIndex:i] length] - posStart);
-        [deletedText addObject:[NSMutableString stringWithString:[[self.buffer.lines objectAtIndex:i] substringWithRange:range]]];
+        NSRange range = NSMakeRange(posStart, [(self.buffer.lines)[i] length] - posStart);
+        [deletedText addObject:[NSMutableString stringWithString:[(self.buffer.lines)[i] substringWithRange:range]]];
         if (delete) {
-          [[self.buffer.lines objectAtIndex:i] deleteCharactersInRange:range];
+          [(self.buffer.lines)[i] deleteCharactersInRange:range];
         }
       } else {
-        [deletedText addObject:[NSMutableString stringWithString:[self.buffer.lines objectAtIndex:i]]];
+        [deletedText addObject:[NSMutableString stringWithString:(self.buffer.lines)[i]]];
         if (delete) {
           [self.buffer.lines removeObjectAtIndex:i];
         }
@@ -409,7 +409,7 @@
         int expectedLines = 0;
         int totalLines = 0;
         for (int i = self.buffer.markMode ? self.buffer.markScreenOffsetY : self.buffer.screenOffsetY; i < self.buffer.lines.count && i <= (self.buffer.markMode ? self.buffer.markCursorLineY : self.buffer.cursorLineY); i++) {
-          NSString* line = [self.buffer.lines objectAtIndex:i];
+          NSString* line = (self.buffer.lines)[i];
           CGSize size = [context sizeOfText:line
                                   breakMode:NCLineBreakByWordWrapping
                                       width:rect.size.width];
@@ -419,7 +419,7 @@
 
         int y = expectedLines - totalLines;
         for (int i = self.buffer.markMode ? self.buffer.markScreenOffsetY : self.buffer.screenOffsetY; i < self.buffer.lines.count; i++) {
-          NSString* line = [self.buffer.lines objectAtIndex:i];
+          NSString* line = (self.buffer.lines)[i];
           if (line) {
             NCColorRange* colorRange = nil;
             NCColor* fg = NCColor.whiteColor;
@@ -509,7 +509,7 @@
 
 - (NSMutableString*)textOnLine:(int)line {
   if (line >= 0 && line < self.buffer.lines.count) {
-    return [self.buffer.lines objectAtIndex:line];
+    return (self.buffer.lines)[line];
   }
   return nil;
 }

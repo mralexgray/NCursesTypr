@@ -20,7 +20,7 @@
 
 @implementation TabMenuView
 
-- (id)initWithFrame:(CGRect)frame {
+- initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
     self.items = [NSMutableArray array];
@@ -57,7 +57,7 @@
 
   if (self.items.count > 0 && self.currentIndex >= 0 && self.currentIndex < self.items.count) {
     if (self.output && [self.output respondsToSelector:@selector(didSelectItem:)]) {
-      [self.output didSelectItem:[self.items objectAtIndex:self.currentIndex]];
+      [self.output didSelectItem:(self.items)[self.currentIndex]];
     }
   } else {
     if (self.output && [self.output respondsToSelector:@selector(didSelectItem:)]) {
@@ -77,7 +77,7 @@
   if (self.currentIndex > 0) {
     self.currentIndex--;
 
-    TabMenuItem* item = [self.items objectAtIndex:self.currentIndex];
+    TabMenuItem* item = (self.items)[self.currentIndex];
     if (self.output && [self.output respondsToSelector:@selector(didSelectItem:)]) {
       [self.output didSelectItem:item];
     }
@@ -88,7 +88,7 @@
   if (self.currentIndex + 1 < self.items.count) {
     self.currentIndex++;
 
-    TabMenuItem* item = [self.items objectAtIndex:self.currentIndex];
+    TabMenuItem* item = (self.items)[self.currentIndex];
     if (self.output && [self.output respondsToSelector:@selector(didSelectItem:)]) {
       [self.output didSelectItem:item];
     }
@@ -97,14 +97,14 @@
 
 - (void)setCurrentTabName:(NSString*)name {
   if (name && self.currentIndex >= 0 && self.currentIndex < self.items.count) {
-    TabMenuItem* item = [self.items objectAtIndex:self.currentIndex];
+    TabMenuItem* item = (self.items)[self.currentIndex];
     item.name = name;
   }
 }
 
 - (void)setCurrentTabTag:(NSObject*)tag {
   if (self.currentIndex >= 0 && self.currentIndex < self.items.count) {
-    TabMenuItem* item = [self.items objectAtIndex:self.currentIndex];
+    TabMenuItem* item = (self.items)[self.currentIndex];
     item.tag = tag;
   }
 }
@@ -118,7 +118,7 @@
     int rx = 0;
     int tempOffsetX = self.offsetX;
     for (int i = 0; i < self.items.count && rx < self.frame.size.width; i++) {
-      TabMenuItem* item = [self.items objectAtIndex:i];
+      TabMenuItem* item = (self.items)[i];
       int lenToDraw = ((int)item.name.length) + 2 - tempOffsetX;
       tempOffsetX -= (item.name.length + 2);
       tempOffsetX = MAX(tempOffsetX, 0);

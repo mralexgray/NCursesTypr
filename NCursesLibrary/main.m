@@ -12,7 +12,7 @@
 int main(int argc, const char* argv[]) {
 
   @autoreleasepool {
-    TestApplication* application = [TestApplication.alloc init];
+    __unused TestApplication* application = [TestApplication.alloc init];
   }
   return 0;
 }

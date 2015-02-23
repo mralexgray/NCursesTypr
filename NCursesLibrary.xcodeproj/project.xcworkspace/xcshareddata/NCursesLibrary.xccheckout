@@ -12,6 +12,8 @@
 	<dict>
 		<key>C006B9CC455FCA8BB09D7025859B9512A6C3D2A7</key>
 		<string>https://github.com/Holloweye/NCursesTypr.git</string>
+		<key>D13050E59C480C9C9130675CC967A76B2FC405CA</key>
+		<string>https://github.com/Holloweye/NCursesFramework.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>NCursesLibrary.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>C006B9CC455FCA8BB09D7025859B9512A6C3D2A7</key>
 		<string>../..</string>
+		<key>D13050E59C480C9C9130675CC967A76B2FC405CA</key>
+		<string>../../../NCursesFramework</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/Holloweye/NCursesTypr.git</string>
@@ -28,6 +32,14 @@
 	<string>C006B9CC455FCA8BB09D7025859B9512A6C3D2A7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D13050E59C480C9C9130675CC967A76B2FC405CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NCursesFramework</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
